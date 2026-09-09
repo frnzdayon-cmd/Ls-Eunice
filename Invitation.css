@@ -532,7 +532,7 @@ font-family:
     Georgia,
     serif;
 
-font-size: 55px;
+font-size: 45px;
 
 font-weight: normal;
 
@@ -639,7 +639,7 @@ font-style: italic;
 
 margin-top: 20px;
 
-font-size: 55px;
+font-size: 20px;
 
 letter-spacing: 3px;
 
@@ -2566,7 +2566,6 @@ font-size: 15px;
 line-height: 1.5;
 
 outline: none;
-```
 
 }
 
