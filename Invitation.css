@@ -1,0 +1,2433 @@
+/* =========================================
+RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* =========================================
+BODY
+========================================= */
+
+body {
+
+
+min-height: 100vh;
+
+background:
+    linear-gradient(
+        135deg,
+        #eadff0,
+        #f8eef8,
+        #e1d0e8
+    );
+
+font-family:
+    'Franklin Gothic Medium',
+    'Arial Narrow',
+    Arial,
+    sans-serif;
+
+color: #80618f;
+
+
+}
+
+/* =========================================
+FALLING PETALS
+========================================= */
+
+.petal-container {
+
+
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100vh;
+
+pointer-events: none;
+
+overflow: hidden;
+
+z-index: 100;
+
+
+}
+
+.petal {
+
+
+position: absolute;
+
+top: -100px;
+
+width: 45px;
+height: auto;
+
+opacity: 0;
+
+object-fit: contain;
+
+filter:
+    drop-shadow(
+        0 5px 6px
+        rgba(
+            80,
+            40,
+            90,
+            0.25
+        )
+    );
+
+animation:
+    petalFall
+    linear
+    infinite;
+
+
+}
+
+/* =========================================
+PETAL POSITIONS
+========================================= */
+
+.petal-1 {
+left: 5%;
+width: 35px;
+animation-duration: 9s;
+animation-delay: 0s;
+}
+
+.petal-2 {
+left: 14%;
+width: 50px;
+animation-duration: 12s;
+animation-delay: 2s;
+}
+
+.petal-3 {
+left: 25%;
+width: 30px;
+animation-duration: 8s;
+animation-delay: 4s;
+}
+
+.petal-4 {
+left: 35%;
+width: 45px;
+animation-duration: 11s;
+animation-delay: 1s;
+}
+
+.petal-5 {
+left: 45%;
+width: 28px;
+animation-duration: 10s;
+animation-delay: 5s;
+}
+
+.petal-6 {
+left: 55%;
+width: 48px;
+animation-duration: 13s;
+animation-delay: 3s;
+}
+
+.petal-7 {
+left: 65%;
+width: 32px;
+animation-duration: 9s;
+animation-delay: 6s;
+}
+
+.petal-8 {
+left: 73%;
+width: 55px;
+animation-duration: 12s;
+animation-delay: 1.5s;
+}
+
+.petal-9 {
+left: 82%;
+width: 35px;
+animation-duration: 10s;
+animation-delay: 4.5s;
+}
+
+.petal-10 {
+left: 90%;
+width: 45px;
+animation-duration: 14s;
+animation-delay: 7s;
+}
+
+.petal-11 {
+left: 18%;
+width: 25px;
+animation-duration: 7s;
+animation-delay: 8s;
+}
+
+.petal-12 {
+left: 60%;
+width: 25px;
+animation-duration: 8s;
+animation-delay: 9s;
+}
+
+/* =========================================
+PETAL ANIMATION
+========================================= */
+
+@keyframes petalFall {
+
+
+0% {
+    top: -100px;
+    opacity: 0;
+
+    transform:
+        translateX(0)
+        rotate(0deg)
+        scale(0.7);
+}
+
+10% {
+    opacity: 0.9;
+}
+
+25% {
+    transform:
+        translateX(70px)
+        rotate(90deg)
+        scale(0.9);
+}
+
+50% {
+    transform:
+        translateX(-50px)
+        rotate(180deg)
+        scale(1);
+}
+
+75% {
+    transform:
+        translateX(80px)
+        rotate(270deg)
+        scale(0.85);
+}
+
+90% {
+    opacity: 0.8;
+}
+
+100% {
+    top: 110vh;
+    opacity: 0;
+
+    transform:
+        translateX(-40px)
+        rotate(360deg)
+        scale(0.7);
+}
+
+
+}
+
+/* =========================================
+INVITATION
+========================================= */
+
+.invitation {
+
+
+min-height: 100vh;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+padding: 40px 20px;
+
+
+}
+
+/* =========================================
+CONTENT
+========================================= */
+
+.content {
+position: relative;
+
+width: 100%;
+
+max-width: 600px;
+
+padding: 50px 30px;
+
+text-align: center;
+
+background: transparent;
+
+overflow: hidden;
+
+border:
+    1px solid
+    rgba(
+        155,
+        131,
+        170,
+        0.3
+    );
+
+box-shadow:
+    0 20px 50px
+    rgba(
+        100,
+        70,
+        110,
+        0.15
+    );
+
+}
+
+/* =========================================
+WEDDING BACKGROUND
+========================================= */
+
+.content::before {
+
+
+content: "";
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+
+background-image:
+
+    linear-gradient(
+        rgba(
+            225,
+            200,
+            227,
+            0.55
+        ),
+        rgba(
+            225,
+            200,
+            227,
+            0.55
+        )
+    ),
+
+    url("WeddingBackground.jpg");
+
+background-size:
+    100% auto;
+
+background-position:
+    top center;
+
+background-repeat:
+    repeat-y;
+
+z-index: 0;
+
+pointer-events: none;
+
+
+}
+
+/* =========================================
+CONTENT ABOVE BACKGROUND
+========================================= */
+
+.content > * {
+
+
+position: relative;
+
+z-index: 1;
+
+
+}
+
+/* =========================================
+TEXT
+========================================= */
+
+.small-title {
+
+
+font-size: 12px;
+
+letter-spacing: 3px;
+
+color: #a58bb5;
+
+margin-bottom: 25px;
+
+}
+
+h1 {
+
+
+font-family:
+    'Bodoni Moda',
+    'Didot',
+    serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+font-size: 45px;
+
+line-height: 1.2;
+
+color: #80618f;
+
+
+}
+
+h1 span {
+
+display: block;
+
+font-size: 25px;
+
+margin: 5px 0;
+
+color: #b28dbb;
+
+}
+
+.subtitle {
+
+
+font-family:
+    'Bodoni Moda',
+    'Didot',
+    serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+margin-top: 25px;
+
+font-size: 12px;
+
+letter-spacing: 2px;
+
+color: #9b83aa;
+
+
+}
+
+.message {
+
+
+margin-top: 20px;
+
+font-family:
+    'Bodoni Moda',
+    'Didot',
+    serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+font-size: 16px;
+
+line-height: 1.8;
+
+color: #91779e;
+
+
+}
+
+/* =========================================
+DIVIDER
+========================================= */
+
+.divider {
+
+
+font-family:
+    'Bodoni Moda',
+    'Didot',
+    serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+margin: 30px 0;
+
+color: #b28dbb;
+
+font-size: 25px;
+
+
+}
+
+/* =========================================
+DATE
+========================================= */
+
+.date {
+
+
+font-family:
+    'Bodoni Moda',
+    'Didot',
+    serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+gap: 25px;
+
+color: #80618f;
+
+
+}
+
+.date span {
+
+
+font-size: 13px;
+
+letter-spacing: 2px;
+
+
+}
+
+.date strong {
+
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 55px;
+
+font-weight: normal;
+
+
+}
+
+/* =========================================
+VENUE
+========================================= */
+
+.venue-section {
+
+
+width: 100%;
+
+margin-top: 25px;
+
+color: #4e3f55;
+
+
+}
+
+.venue-top {
+
+
+font-family:
+    'Bodoni Moda',
+    'Didot',
+    serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+display: grid;
+
+grid-template-columns:
+    1fr 1fr;
+
+text-align: center;
+
+font-size: 13px;
+
+letter-spacing: 2px;
+
+}
+
+.venue-line {
+
+
+width: 1px;
+
+height: 30px;
+
+background-color: #332e36;
+
+margin: 5px auto 0;
+
+
+}
+
+.venue-bottom {
+
+font-family:
+    'Bodoni Moda',
+    'Didot',
+    serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+display: grid;
+
+grid-template-columns:
+    1fr 1fr;
+
+text-align: center;
+
+font-size: 12px;
+
+letter-spacing: 1.5px;
+
+color: #49245c;
+
+
+}
+
+/* =========================================
+YEAR
+========================================= */
+
+.time {
+
+
+font-family:
+    'Bodoni Moda',
+    'Didot',
+    serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+margin-top: 20px;
+
+font-size: 55px;
+
+letter-spacing: 3px;
+
+
+}
+
+/* =========================================
+VIEW DETAILS BUTTON
+========================================= */
+
+.details-button {
+
+
+font-family:
+    'Bodoni Moda',
+    'Didot',
+    serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+margin-top: 35px;
+
+padding: 12px 25px;
+
+border: none;
+
+border-radius: 25px;
+
+background: #9b719e;
+
+color: white;
+
+font-size: 12px;
+
+letter-spacing: 2px;
+
+cursor: pointer;
+
+transition:
+    all 0.3s ease;
+
+
+}
+
+.details-button:hover {
+
+background: #80618f;
+
+transform:
+    translateY(-2px);
+
+
+}
+
+.details-button:active {
+
+transform:
+    scale(0.95);
+
+
+}
+
+/* =========================================
+DETAILS
+========================================= */
+
+.details {
+
+width: 100%;
+
+max-height: 0;
+
+overflow: hidden;
+
+opacity: 0;
+
+color: #3e2b47;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 15px;
+
+line-height: 1.8;
+
+margin-left: auto;
+
+margin-right: auto;
+
+transition:
+    max-height 0.7s ease,
+    opacity 0.5s ease;
+
+}
+
+.details.show {
+
+max-height: 10000px;
+
+overflow: visible;
+
+opacity: 1;
+
+margin-top: 25px;
+
+
+}
+
+.details p {
+
+margin-bottom: 15px;
+
+letter-spacing: 2px;
+
+color: #1f032e;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 15px;
+
+line-height: 1.2;
+
+
+}
+
+/* =========================================
+WEDDING PARTY
+========================================= */
+
+.wedding-party {
+
+
+width: 100%;
+
+max-width: 900px;
+
+margin: 60px auto 40px;
+
+text-align: center;
+
+
+}
+
+/* =========================================
+PARTY SECTION
+========================================= */
+
+.party-section {
+
+
+width: 100%;
+
+margin: 0 auto 60px;
+
+text-align: center;
+
+
+}
+
+.party-section h2 {
+
+
+font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+font-size: 26px;
+
+letter-spacing: 3px;
+
+margin-bottom: 20px;
+
+text-transform: uppercase;
+
+color: #593968;
+
+
+}
+
+/* =========================================
+TABLE WRAPPER
+========================================= */
+
+.party-table-wrapper {
+
+width: 100%;
+
+overflow-x: auto;
+
+margin: 0 auto;
+
+border-radius: 16px;
+
+box-shadow:
+    0 10px 25px
+    rgba(
+        90,
+        55,
+        105,
+        0.13
+    );
+
+
+}
+
+/* =========================================
+WEDDING PARTY TABLE
+========================================= */
+
+.party-table {
+
+
+width: 100%;
+
+border-collapse: separate;
+
+border-spacing: 0;
+
+overflow: hidden;
+
+border:
+    1px solid
+    rgba(
+        130,
+        95,
+        145,
+        0.28
+    );
+
+border-radius: 16px;
+
+background:
+    rgba(
+        255,
+        255,
+        255,
+        0.55
+    );
+
+font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+}
+
+/* =========================================
+TABLE HEADER
+FIRST ROW = DIFFERENT COLOR
+========================================= */
+
+.party-table thead th {
+
+
+padding:
+    15px 12px;
+
+background:
+    linear-gradient(
+        135deg,
+        #a98ab6,
+        #8f6c9d
+    );
+
+color: #ffffff;
+
+font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+font-size: 16px;
+
+font-weight: bold;
+
+letter-spacing: 1.5px;
+
+text-transform: uppercase;
+
+border-bottom:
+    2px solid
+    rgba(
+        255,
+        255,
+        255,
+        0.35
+    );
+
+}
+
+/* =========================================
+FIRST HEADER CELL
+========================================= */
+
+.party-table thead th:first-child {
+
+border-top-left-radius: 14px;
+
+}
+
+/* =========================================
+LAST HEADER CELL
+========================================= */
+
+.party-table thead th:last-child {
+
+
+border-top-right-radius: 14px;
+
+
+}
+
+/* =========================================
+TABLE BODY CELLS
+========================================= */
+
+.party-table tbody td {
+
+padding:
+    13px 12px;
+
+font-size: 16px;
+
+line-height: 1.5;
+
+color: #4c3456;
+
+border-bottom:
+    1px solid
+    rgba(
+        130,
+        95,
+        145,
+        0.15
+    );
+
+
+}
+
+/* =========================================
+ALTERNATING ROWS
+========================================= */
+
+.party-table tbody tr:nth-child(odd) td {
+
+
+background:
+    rgba(
+        255,
+        255,
+        255,
+        0.72
+    );
+
+
+}
+
+.party-table tbody tr:nth-child(even) td {
+
+
+background:
+    rgba(
+        237,
+        224,
+        243,
+        0.75
+    );
+
+
+}
+
+/* =========================================
+SECOND COLUMN ALTERNATING COLOR
+========================================= */
+
+.party-table tbody td:nth-child(2) {
+
+
+background:
+    rgba(
+        220,
+        201,
+        229,
+        0.55
+    );
+
+}
+
+.party-table tbody tr:nth-child(even) td:nth-child(2) {
+
+
+background:
+    rgba(
+        207,
+        185,
+        220,
+        0.65
+    );
+
+
+}
+
+/* =========================================
+TABLE HOVER
+========================================= */
+
+.party-table tbody tr {
+
+
+transition:
+    all 0.25s ease;
+
+
+}
+
+.party-table tbody tr:hover td {
+
+background:
+    rgba(
+        207,
+        185,
+        220,
+        0.75
+    );
+
+}
+
+/* =========================================
+LAST ROW
+========================================= */
+
+.party-table tbody tr:last-child td {
+
+
+border-bottom: none;
+
+
+}
+
+/* =========================================
+LAST BODY CORNERS
+========================================= */
+
+.party-table tbody tr:last-child td:first-child {
+
+
+border-bottom-left-radius: 14px;
+
+
+}
+
+.party-table tbody tr:last-child td:last-child {
+
+border-bottom-right-radius: 14px;
+
+}
+
+/* =========================================
+PARTY SUBTITLE
+========================================= */
+
+.party-subtitle {
+
+font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+font-size: 14px;
+
+font-style: italic;
+
+margin-top: -8px;
+
+margin-bottom: 20px;
+
+color: #80618f;
+
+}
+
+/* =========================================
+ENTOURAGE
+========================================= */
+
+.entourage-section {
+
+width: 100%;
+
+
+}
+
+.entourage-title {
+
+
+margin-top: 25px;
+
+margin-bottom: 12px;
+
+font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+font-size: 18px;
+
+letter-spacing: 2px;
+
+text-transform: uppercase;
+
+color: #80618f;
+
+}
+
+.entourage-table-container {
+
+
+width: 100%;
+
+margin-bottom: 35px;
+
+
+}
+
+.entourage-table {
+
+
+width: 100%;
+
+}
+
+/* =========================================
+DRESS CODE
+========================================= */
+
+.dress-code {
+
+display: flex;
+
+align-items: center;
+
+font-size: 18px;
+
+color: #2d143c;
+
+margin: 20px 0;
+
+}
+
+.dress-code div {
+
+
+flex: 1;
+
+height: 2px;
+
+background-color: #a58bb5;
+
+}
+
+.dress-code span {
+
+padding:
+    0 15px;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 20px;
+
+line-height: 1.8;
+
+
+}
+
+/* =========================================
+COLOR PALETTE
+========================================= */
+
+.palette-title {
+
+
+letter-spacing: 5px;
+
+margin-top: 10px;
+
+margin-bottom: 10px;
+
+
+}
+
+.palette-image {
+
+
+max-width: 100%;
+
+height: auto;
+
+display: block;
+
+margin: 0 auto;
+
+}
+
+/* =========================================
+COMMENTS SECTION
+========================================= */
+
+.comments-section {
+
+
+position: relative;
+
+margin-top: 45px;
+
+padding:
+    38px 25px 30px;
+
+border-radius: 25px;
+
+background:
+    linear-gradient(
+        145deg,
+        rgba(
+            255,
+            255,
+            255,
+            0.65
+        ),
+        rgba(
+            238,
+            219,
+            244,
+            0.55
+        )
+    );
+
+border:
+    1px solid
+    rgba(
+        165,
+        139,
+        181,
+        0.45
+    );
+
+box-shadow:
+
+    0 20px 45px
+    rgba(
+        90,
+        55,
+        105,
+        0.16
+    ),
+
+    inset 0 1px 0
+    rgba(
+        255,
+        255,
+        255,
+        0.8
+    );
+
+backdrop-filter:
+    blur(12px);
+
+-webkit-backdrop-filter:
+    blur(12px);
+
+overflow: hidden;
+
+}
+
+/* =========================================
+DECORATIVE GLOW
+========================================= */
+
+.comments-section::before {
+
+content: "";
+
+position: absolute;
+
+width: 180px;
+
+height: 180px;
+
+top: -90px;
+
+left: -70px;
+
+border-radius: 50%;
+
+background:
+    rgba(
+        210,
+        174,
+        222,
+        0.28
+    );
+
+filter:
+    blur(25px);
+
+pointer-events: none;
+
+
+}
+
+.comments-section::after {
+
+
+content: "♥";
+
+position: absolute;
+
+top: 12px;
+
+right: 20px;
+
+color:
+    rgba(
+        165,
+        139,
+        181,
+        0.25
+    );
+
+font-size: 30px;
+
+animation:
+    luxuryHeart
+    3s ease-in-out infinite;
+
+}
+
+@keyframes luxuryHeart {
+
+
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(-8deg);
+
+    opacity: 0.35;
+}
+
+50% {
+
+    transform:
+        translateY(-7px)
+        rotate(8deg);
+
+    opacity: 0.8;
+}
+
+}
+
+/* =========================================
+COMMENTS TITLE
+========================================= */
+
+.comments-title {
+
+
+position: relative;
+
+color: #80618f;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 28px;
+
+font-weight: normal;
+
+letter-spacing: 2px;
+
+margin-bottom: 10px;
+
+text-shadow:
+    0 2px 8px
+    rgba(
+        128,
+        97,
+        143,
+        0.18
+    );
+
+}
+
+.comments-title::after {
+
+content: "";
+
+display: block;
+
+width: 55px;
+
+height: 1px;
+
+margin:
+    12px auto 0;
+
+background:
+    linear-gradient(
+        to right,
+        transparent,
+        #a58bb5,
+        transparent
+    );
+
+
+}
+
+/* =========================================
+COMMENTS SUBTITLE
+========================================= */
+
+.comments-subtitle {
+
+color: #91779e;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 14px;
+
+font-style: italic;
+
+letter-spacing: 1px;
+
+line-height: 1.7;
+
+margin-bottom: 25px;
+
+
+}
+
+/* =========================================
+COMMENT FORM
+========================================= */
+
+.comment-form {
+
+
+position: relative;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 14px;
+
+align-items: center;
+
+
+}
+
+/* =========================================
+INPUTS
+========================================= */
+
+.comment-form input,
+.comment-form textarea {
+
+width: 100%;
+
+padding:
+    15px 18px;
+
+border:
+    1px solid
+    rgba(
+        155,
+        126,
+        170,
+        0.35
+    );
+
+border-radius: 14px;
+
+background:
+    rgba(
+        255,
+        255,
+        255,
+        0.55
+    );
+
+color: #80618f;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 14px;
+
+outline: none;
+
+text-align: center;
+
+box-shadow:
+    inset 0 2px 8px
+    rgba(
+        100,
+        70,
+        110,
+        0.05
+    );
+
+transition:
+    all 0.4s ease;
+
+
+}
+
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+
+color: #a58bb5;
+
+font-family:
+    Georgia,
+    serif;
+
+font-style: italic;
+
+}
+
+.comment-form input:hover,
+.comment-form textarea:hover {
+
+background:
+    rgba(
+        255,
+        255,
+        255,
+        0.75
+    );
+
+border-color:
+    rgba(
+        155,
+        113,
+        158,
+        0.55
+    );
+
+transform:
+    translateY(-1px);
+
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+
+
+background:
+    rgba(
+        255,
+        255,
+        255,
+        0.85
+    );
+
+border-color: #9b719e;
+
+box-shadow:
+
+    0 0 0 3px
+    rgba(
+        155,
+        113,
+        158,
+        0.10
+    ),
+
+    0 8px 20px
+    rgba(
+        100,
+        70,
+        110,
+        0.10
+    );
+
+transform:
+    translateY(-2px);
+
+}
+
+.comment-form textarea {
+
+
+min-height: 125px;
+
+resize: vertical;
+
+
+}
+
+/* =========================================
+POST BUTTON
+========================================= */
+
+.comment-form button {
+
+position: relative;
+
+overflow: hidden;
+
+padding:
+    14px 25px;
+
+border:
+    1px solid
+    rgba(
+        255,
+        255,
+        255,
+        0.5
+    );
+
+border-radius: 30px;
+
+background:
+    linear-gradient(
+        135deg,
+        #b28dbb,
+        #8f6599,
+        #b28dbb
+    );
+
+background-size:
+    200% 200%;
+
+color: white;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 12px;
+
+letter-spacing: 3px;
+
+cursor: pointer;
+
+margin-left: auto;
+margin-right: auto;
+
+box-shadow:
+    0 8px 20px
+    rgba(
+        128,
+        97,
+        143,
+        0.25
+    );
+
+transition:
+    all 0.4s ease;
+
+animation:
+    buttonGlow
+    3s ease-in-out infinite;
+
+
+}
+
+.comment-form button::before {
+
+
+content: "";
+
+position: absolute;
+
+top: 0;
+
+left: -100%;
+
+width: 70%;
+
+height: 100%;
+
+background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        ),
+        transparent
+    );
+
+transform:
+    skewX(-20deg);
+
+transition:
+    0.6s;
+
+
+}
+
+.comment-form button:hover::before {
+
+left: 130%;
+
+}
+
+.comment-form button:hover {
+
+background-position:
+    right center;
+
+transform:
+    translateY(-3px);
+
+box-shadow:
+    0 12px 28px
+    rgba(
+        128,
+        97,
+        143,
+        0.35
+    );
+
+}
+
+.comment-form button:active {
+
+
+transform:
+    scale(0.97);
+
+
+}
+
+@keyframes buttonGlow {
+
+0%,
+100% {
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            128,
+            97,
+            143,
+            0.20
+        );
+}
+
+50% {
+
+    box-shadow:
+        0 8px 28px
+        rgba(
+            128,
+            97,
+            143,
+            0.40
+        );
+
+
+}
+}
+/* =========================================
+MESSAGES LIST
+========================================= */
+
+.comments-list-section{
+
+
+    margin-top: 38px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid
+        rgba(
+            128,
+            97,
+            143,
+            0.15
+        );
+
+
+}
+
+.comments-list-section h3 {
+
+color: #80618f;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 21px;
+
+font-weight: normal;
+
+letter-spacing: 2px;
+
+margin-bottom: 20px;
+
+
+}
+
+/* =========================================
+COMMENT BOX
+========================================= */
+
+.comment-box {
+
+
+position: relative;
+
+text-align: center;
+
+padding:
+    20px 20px 17px;
+
+margin-bottom: 17px;
+
+border-radius: 16px;
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(
+            255,
+            255,
+            255,
+            0.70
+        ),
+        rgba(
+            245,
+            232,
+            248,
+            0.60
+        )
+    );
+
+border:
+    1px solid
+    rgba(
+        165,
+        139,
+        181,
+        0.25
+    );
+
+border-left:
+    3px solid
+    #a58bb5;
+
+box-shadow:
+    0 8px 20px
+    rgba(
+        100,
+        70,
+        110,
+        0.09
+    );
+
+backdrop-filter:
+    blur(8px);
+
+-webkit-backdrop-filter:
+    blur(8px);
+
+transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+animation:
+    messageAppear
+    0.6s ease;
+
+
+}
+
+.comment-box:hover {
+
+
+transform:
+    translateY(-4px);
+
+box-shadow:
+    0 14px 28px
+    rgba(
+        100,
+        70,
+        110,
+        0.15
+    );
+
+
+}
+
+.comment-box::after {
+
+
+content: "♥";
+
+position: absolute;
+
+top: 13px;
+
+right: 17px;
+
+font-size: 15px;
+
+color:
+    rgba(
+        165,
+        139,
+        181,
+        0.45
+    );
+
+}
+
+.comment-box h4 {
+
+
+color: #80618f;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 17px;
+
+font-weight: normal;
+
+letter-spacing: 1px;
+
+margin-bottom: 9px;
+
+text-align: center;
+
+
+}
+
+.comment-box p {
+
+color: #91779e;
+
+font-family:
+    Georgia,
+    serif;
+
+font-size: 14px;
+
+line-height: 1.7;
+
+letter-spacing: 0;
+
+margin-bottom: 10px;
+
+word-wrap: break-word;
+
+text-align: center;
+
+}
+
+.comment-box small {
+
+color: #b09db8;
+
+font-family:
+    Arial,
+    sans-serif;
+
+font-size: 10px;
+
+letter-spacing: 0.5px;
+
+text-align: center;
+
+}
+
+@keyframes messageAppear {
+
+from {
+
+    opacity: 0;
+
+    transform:
+        translateY(15px)
+        scale(0.98);
+}
+
+to {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+}
+
+/* =========================================
+FINAL CENTERING
+========================================= */
+
+.content,
+.content * {
+
+text-align: center;
+
+
+}
+
+.details,
+.wedding-party {
+
+width: 100%;
+
+margin-left: auto;
+
+margin-right: auto;
+
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+
+.invitation {
+
+    padding:
+        25px 12px;
+}
+
+
+.content {
+
+    padding:
+        40px 15px;
+}
+
+
+.content::before {
+
+    background-size:
+        100% auto;
+
+    background-position:
+        top center;
+
+    background-repeat:
+        repeat-y;
+}
+
+
+h1 {
+
+    font-size: 32px;
+}
+
+
+h1 span {
+
+    font-size: 20px;
+}
+
+
+.date {
+
+    gap: 15px;
+}
+
+
+.date strong {
+
+    font-size: 45px;
+}
+
+
+.venue-top {
+
+    font-size: 11px;
+}
+
+
+.venue-bottom {
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+.venue-line {
+
+    height: 30px;
+}
+
+
+.time {
+
+    font-size: 45px;
+}
+
+
+.dress-code span {
+
+    font-size: 15px;
+
+    padding:
+        0 8px;
+}
+
+
+.petal {
+
+    max-width: 35px;
+}
+
+
+/* =====================================
+   MOBILE WEDDING TABLES
+===================================== */
+
+.wedding-party {
+
+    width: 100%;
+
+    margin-top: 45px;
+}
+
+
+.party-section {
+
+    margin-bottom: 45px;
+}
+
+
+.party-section h2 {
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.party-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: hidden;
+}
+
+
+.party-table {
+
+    width: 100%;
+
+    table-layout: fixed;
+}
+
+
+.party-table thead th {
+
+    padding:
+        11px 6px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.party-table tbody td {
+
+    padding:
+        11px 6px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    word-break: normal;
+
+    overflow-wrap: break-word;
+}
+
+
+.party-subtitle {
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================
+   MOBILE ENTOURAGE
+===================================== */
+
+.entourage-section {
+
+    width: 100%;
+}
+
+
+.entourage-title {
+
+    font-size: 14px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+
+.entourage-table-container {
+
+    margin-bottom: 28px;
+}
+
+
+.entourage-table thead th {
+
+    font-size: 11px;
+
+    padding:
+        11px 5px;
+}
+
+
+.entourage-table tbody td {
+
+    font-size: 12px;
+
+    padding:
+        10px 5px;
+}
+
+
+/* =====================================
+   MOBILE COMMENTS
+===================================== */
+
+.comments-section {
+
+    margin-top: 35px;
+
+    padding:
+        30px 17px 25px;
+
+    border-radius: 22px;
+}
+
+
+.comments-title {
+
+    font-size: 23px;
+}
+
+
+.comments-subtitle {
+
+    font-size: 12px;
+}
+
+
+.comment-form input,
+.comment-form textarea {
+
+    padding:
+        14px 15px;
+}
+
+
+.comment-form textarea {
+
+    min-height: 115px;
+}
+
+
+.comment-form button {
+
+    padding:
+        13px 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+.comment-box {
+
+    padding: 17px;
+}
+
+
+.comment-box h4 {
+
+    font-size: 16px;
+}
+
+
+.comment-box p {
+
+    font-size: 13px;
+}
+
+
+}
+
+/* =========================================
+EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+
+.content {
+
+    padding:
+        35px 10px;
+}
+
+
+.party-table thead th {
+
+    font-size: 10px;
+
+    padding:
+        10px 4px;
+}
+
+
+.party-table tbody td {
+
+    font-size: 11px;
+
+    padding:
+        9px 4px;
+}
+
+
+.party-section h2 {
+
+    font-size: 18px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.entourage-table thead th {
+
+    font-size: 9px;
+}
+
+
+.entourage-table tbody td {
+
+    font-size: 10px;
+}
+
+
+
+}

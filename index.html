@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Wedding Invitation</title>
+
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         DECORATIVE BACKGROUND
+    ========================================= -->
+
+    <div class="background-glow glow-one"></div>
+
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- =========================================
+         FLOATING HEARTS
+    ========================================= -->
+
+    <div class="floating-hearts">
+
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+
+    </div>
+
+
+    <!-- =========================================
+         WEDDING INVITATION ENVELOPE
+    ========================================= -->
+
+    <div
+        class="envelope-container"
+        onclick="openEnvelope()"
+    >
+
+
+        <!-- =====================================
+             DECORATIVE FRAME
+        ====================================== -->
+
+        <div class="envelope-frame">
+
+            <span class="corner corner-top-left"></span>
+
+            <span class="corner corner-top-right"></span>
+
+            <span class="corner corner-bottom-left"></span>
+
+            <span class="corner corner-bottom-right"></span>
+
+        </div>
+
+
+        <!-- =====================================
+             ENVELOPE
+        ====================================== -->
+
+        <div class="envelope">
+
+
+            <!-- =================================
+                 INVITATION IMAGE
+            ================================== -->
+
+            <div class="letter">
+
+                <img
+                    src="La and Eunice.jpg"
+                    alt="La and Eunice Wedding Invitation"
+                    class="envelope-image"
+                >
+
+            </div>
+
+
+            <!-- =================================
+                 ENVELOPE FRONT
+            ================================== -->
+
+            <div class="front"></div>
+
+
+            <!-- =================================
+                 ENVELOPE FLAP
+            ================================== -->
+
+            <div class="flap"></div>
+
+
+            <!-- =================================
+                 CENTER STAMP
+            ================================== -->
+
+            <div class="center-stamp">
+
+                <img
+                    src="Stamp.png"
+                    alt="Wedding Stamp"
+                >
+
+            </div>
+
+
+            <!-- =================================
+                 TAP SIGN
+            ================================== -->
+
+            <div class="tap-sign">
+
+                <span class="tap-text">
+                    TAP HERE
+                </span>
+
+                <span class="tap-heart">
+                    ♡
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+        let envelopeOpened = false;
+
+
+        function openEnvelope() {
+
+            /*
+             * Prevent the envelope from
+             * opening more than once.
+             */
+
+            if (envelopeOpened) {
+
+                return;
+
+            }
+
+
+            envelopeOpened = true;
+
+
+            /*
+             * Tell Invitation.html
+             * to play the wedding music.
+             */
+
+            sessionStorage.setItem(
+                "playWeddingMusic",
+                "true"
+            );
+
+
+            /*
+             * Open the envelope.
+             */
+
+            document
+                .querySelector(".envelope-container")
+                .classList.add("open");
+
+
+            /*
+             * Wait for the animation
+             * before going to Invitation.html.
+             */
+
+            setTimeout(function() {
+
+                window.location.href =
+                    "Invitation.html";
+
+            }, 1800);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
