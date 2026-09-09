@@ -1,1801 +1,1687 @@
 /* =========================================
-RESET
+   RESET
 ========================================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 /* =========================================
-BODY
+   BODY
 ========================================= */
 
 body {
 
+    min-height: 100vh;
 
-min-height: 100vh;
+    background:
+        linear-gradient(
+            135deg,
+            #eadff0,
+            #f8eef8,
+            #e1d0e8
+        );
 
-background:
-    linear-gradient(
-        135deg,
-        #eadff0,
-        #f8eef8,
-        #e1d0e8
-    );
+    font-family:
+        'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
 
-font-family:
-    'Franklin Gothic Medium',
-    'Arial Narrow',
-    Arial,
-    sans-serif;
-
-color: #80618f;
-
+    color: #80618f;
 
 }
 
+
 /* =========================================
-FALLING PETALS
+   FALLING PETALS
 ========================================= */
 
 .petal-container {
 
+    position: fixed;
 
-position: fixed;
+    top: 0;
+    left: 0;
 
-top: 0;
-left: 0;
+    width: 100%;
+    height: 100vh;
 
-width: 100%;
-height: 100vh;
+    pointer-events: none;
 
-pointer-events: none;
+    overflow: hidden;
 
-overflow: hidden;
-
-z-index: 100;
-
+    z-index: 100;
 
 }
 
 .petal {
 
+    position: absolute;
 
-position: absolute;
+    top: -100px;
 
-top: -100px;
+    width: 45px;
+    height: auto;
 
-width: 45px;
-height: auto;
+    opacity: 0;
 
-opacity: 0;
+    object-fit: contain;
 
-object-fit: contain;
+    filter:
+        drop-shadow(
+            0 5px 6px
+            rgba(
+                80,
+                40,
+                90,
+                0.25
+            )
+        );
 
-filter:
-    drop-shadow(
-        0 5px 6px
-        rgba(
-            80,
-            40,
-            90,
-            0.25
-        )
-    );
-
-animation:
-    petalFall
-    linear
-    infinite;
-
+    animation:
+        petalFall
+        linear
+        infinite;
 
 }
 
+
 /* =========================================
-PETAL POSITIONS
+   PETAL POSITIONS
 ========================================= */
 
 .petal-1 {
-left: 5%;
-width: 35px;
-animation-duration: 9s;
-animation-delay: 0s;
+    left: 5%;
+    width: 35px;
+    animation-duration: 9s;
+    animation-delay: 0s;
 }
 
 .petal-2 {
-left: 14%;
-width: 50px;
-animation-duration: 12s;
-animation-delay: 2s;
+    left: 14%;
+    width: 50px;
+    animation-duration: 12s;
+    animation-delay: 2s;
 }
 
 .petal-3 {
-left: 25%;
-width: 30px;
-animation-duration: 8s;
-animation-delay: 4s;
+    left: 25%;
+    width: 30px;
+    animation-duration: 8s;
+    animation-delay: 4s;
 }
 
 .petal-4 {
-left: 35%;
-width: 45px;
-animation-duration: 11s;
-animation-delay: 1s;
+    left: 35%;
+    width: 45px;
+    animation-duration: 11s;
+    animation-delay: 1s;
 }
 
 .petal-5 {
-left: 45%;
-width: 28px;
-animation-duration: 10s;
-animation-delay: 5s;
+    left: 45%;
+    width: 28px;
+    animation-duration: 10s;
+    animation-delay: 5s;
 }
 
 .petal-6 {
-left: 55%;
-width: 48px;
-animation-duration: 13s;
-animation-delay: 3s;
+    left: 55%;
+    width: 48px;
+    animation-duration: 13s;
+    animation-delay: 3s;
 }
 
 .petal-7 {
-left: 65%;
-width: 32px;
-animation-duration: 9s;
-animation-delay: 6s;
+    left: 65%;
+    width: 32px;
+    animation-duration: 9s;
+    animation-delay: 6s;
 }
 
 .petal-8 {
-left: 73%;
-width: 55px;
-animation-duration: 12s;
-animation-delay: 1.5s;
+    left: 73%;
+    width: 55px;
+    animation-duration: 12s;
+    animation-delay: 1.5s;
 }
 
 .petal-9 {
-left: 82%;
-width: 35px;
-animation-duration: 10s;
-animation-delay: 4.5s;
+    left: 82%;
+    width: 35px;
+    animation-duration: 10s;
+    animation-delay: 4.5s;
 }
 
 .petal-10 {
-left: 90%;
-width: 45px;
-animation-duration: 14s;
-animation-delay: 7s;
+    left: 90%;
+    width: 45px;
+    animation-duration: 14s;
+    animation-delay: 7s;
 }
 
 .petal-11 {
-left: 18%;
-width: 25px;
-animation-duration: 7s;
-animation-delay: 8s;
+    left: 18%;
+    width: 25px;
+    animation-duration: 7s;
+    animation-delay: 8s;
 }
 
 .petal-12 {
-left: 60%;
-width: 25px;
-animation-duration: 8s;
-animation-delay: 9s;
+    left: 60%;
+    width: 25px;
+    animation-duration: 8s;
+    animation-delay: 9s;
 }
 
+.petal-13 {
+    left: 30%;
+    width: 32px;
+    animation-duration: 11s;
+    animation-delay: 3s;
+}
+
+.petal-14 {
+    left: 48%;
+    width: 40px;
+    animation-duration: 10s;
+    animation-delay: 6s;
+}
+
+.petal-15 {
+    left: 78%;
+    width: 30px;
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+
+.petal-16 {
+    left: 95%;
+    width: 38px;
+    animation-duration: 12s;
+    animation-delay: 5s;
+}
+
+
 /* =========================================
-PETAL ANIMATION
+   PETAL ANIMATION
 ========================================= */
 
 @keyframes petalFall {
 
+    0% {
 
-0% {
-    top: -100px;
-    opacity: 0;
+        top: -100px;
 
-    transform:
-        translateX(0)
-        rotate(0deg)
-        scale(0.7);
+        opacity: 0;
+
+        transform:
+            translateX(0)
+            rotate(0deg)
+            scale(0.7);
+
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    25% {
+
+        transform:
+            translateX(70px)
+            rotate(90deg)
+            scale(0.9);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(-50px)
+            rotate(180deg)
+            scale(1);
+
+    }
+
+    75% {
+
+        transform:
+            translateX(80px)
+            rotate(270deg)
+            scale(0.85);
+
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+
+        top: 110vh;
+
+        opacity: 0;
+
+        transform:
+            translateX(-40px)
+            rotate(360deg)
+            scale(0.7);
+
+    }
+
 }
 
-10% {
-    opacity: 0.9;
-}
-
-25% {
-    transform:
-        translateX(70px)
-        rotate(90deg)
-        scale(0.9);
-}
-
-50% {
-    transform:
-        translateX(-50px)
-        rotate(180deg)
-        scale(1);
-}
-
-75% {
-    transform:
-        translateX(80px)
-        rotate(270deg)
-        scale(0.85);
-}
-
-90% {
-    opacity: 0.8;
-}
-
-100% {
-    top: 110vh;
-    opacity: 0;
-
-    transform:
-        translateX(-40px)
-        rotate(360deg)
-        scale(0.7);
-}
-
-
-}
 
 /* =========================================
-INVITATION
+   INVITATION
 ========================================= */
 
 .invitation {
 
+    min-height: 100vh;
 
-min-height: 100vh;
+    display: flex;
 
-display: flex;
+    justify-content: center;
 
-justify-content: center;
+    align-items: center;
 
-align-items: center;
-
-padding: 40px 20px;
-
+    padding: 40px 20px;
 
 }
 
+
 /* =========================================
-CONTENT
+   CONTENT
 ========================================= */
 
 .content {
-position: relative;
 
-width: 100%;
+    position: relative;
 
-max-width: 600px;
+    width: 100%;
 
-padding: 50px 30px;
+    max-width: 600px;
 
-text-align: center;
+    padding: 50px 30px;
 
-background: transparent;
+    text-align: center;
 
-overflow: hidden;
+    background: transparent;
 
-border:
-    1px solid
-    rgba(
-        155,
-        131,
-        170,
-        0.3
-    );
+    overflow: hidden;
 
-box-shadow:
-    0 20px 50px
-    rgba(
-        100,
-        70,
-        110,
-        0.15
-    );
+    border:
+        1px solid
+        rgba(
+            155,
+            131,
+            170,
+            0.3
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(
+            100,
+            70,
+            110,
+            0.15
+        );
 
 }
 
+
 /* =========================================
-WEDDING BACKGROUND
+   WEDDING BACKGROUND
 ========================================= */
 
 .content::before {
 
+    content: "";
 
-content: "";
+    position: absolute;
 
-position: absolute;
+    top: 0;
+    left: 0;
 
-top: 0;
-left: 0;
+    width: 100%;
+    height: 100%;
 
-width: 100%;
-height: 100%;
+    background-image:
 
-background-image:
-
-    linear-gradient(
-        rgba(
-            225,
-            200,
-            227,
-            0.55
+        linear-gradient(
+            rgba(
+                225,
+                200,
+                227,
+                0.55
+            ),
+            rgba(
+                225,
+                200,
+                227,
+                0.55
+            )
         ),
-        rgba(
-            225,
-            200,
-            227,
-            0.55
-        )
-    ),
 
-    url("WeddingBackground.jpg");
+        url("WeddingBackground.jpg");
 
-background-size:
-    100% auto;
+    background-size:
+        100% auto;
 
-background-position:
-    top center;
+    background-position:
+        top center;
 
-background-repeat:
-    repeat-y;
+    background-repeat:
+        repeat-y;
 
-z-index: 0;
+    z-index: 0;
 
-pointer-events: none;
-
+    pointer-events: none;
 
 }
 
+
 /* =========================================
-CONTENT ABOVE BACKGROUND
+   CONTENT ABOVE BACKGROUND
 ========================================= */
 
 .content > * {
 
+    position: relative;
 
-position: relative;
-
-z-index: 1;
-
+    z-index: 1;
 
 }
 
+
 /* =========================================
-TEXT
+   TEXT
 ========================================= */
 
 .small-title {
 
+    font-size: 12px;
 
-font-size: 12px;
+    letter-spacing: 3px;
 
-letter-spacing: 3px;
+    color: #a58bb5;
 
-color: #a58bb5;
-
-margin-bottom: 25px;
+    margin-bottom: 25px;
 
 }
 
 h1 {
 
+    font-family:
+        'Bodoni Moda',
+        'Didot',
+        serif;
 
-font-family:
-    'Bodoni Moda',
-    'Didot',
-    serif;
+    font-weight: 700;
 
-font-weight: 700;
+    font-style: italic;
 
-font-style: italic;
+    font-size: 45px;
 
-font-size: 45px;
+    line-height: 1.2;
 
-line-height: 1.2;
-
-color: #80618f;
-
+    color: #80618f;
 
 }
 
 h1 span {
 
-display: block;
+    display: block;
 
-font-size: 25px;
+    font-size: 25px;
 
-margin: 5px 0;
+    margin: 5px 0;
 
-color: #b28dbb;
+    color: #b28dbb;
 
 }
 
 .subtitle {
 
+    font-family:
+        'Bodoni Moda',
+        'Didot',
+        serif;
 
-font-family:
-    'Bodoni Moda',
-    'Didot',
-    serif;
+    font-weight: 700;
 
-font-weight: 700;
+    font-style: italic;
 
-font-style: italic;
+    margin-top: 25px;
 
-margin-top: 25px;
+    font-size: 12px;
 
-font-size: 12px;
+    letter-spacing: 2px;
 
-letter-spacing: 2px;
-
-color: #9b83aa;
-
+    color: #9b83aa;
 
 }
 
 .message {
 
+    margin-top: 20px;
 
-margin-top: 20px;
+    font-family:
+        'Bodoni Moda',
+        'Didot',
+        serif;
 
-font-family:
-    'Bodoni Moda',
-    'Didot',
-    serif;
+    font-weight: 700;
 
-font-weight: 700;
+    font-style: italic;
 
-font-style: italic;
+    font-size: 16px;
 
-font-size: 16px;
+    line-height: 1.8;
 
-line-height: 1.8;
-
-color: #91779e;
-
+    color: #91779e;
 
 }
 
+
 /* =========================================
-DIVIDER
+   DIVIDER
 ========================================= */
 
 .divider {
 
+    font-family:
+        'Bodoni Moda',
+        'Didot',
+        serif;
 
-font-family:
-    'Bodoni Moda',
-    'Didot',
-    serif;
+    font-weight: 700;
 
-font-weight: 700;
+    font-style: italic;
 
-font-style: italic;
+    margin: 30px 0;
 
-margin: 30px 0;
+    color: #b28dbb;
 
-color: #b28dbb;
-
-font-size: 25px;
-
+    font-size: 25px;
 
 }
 
+
 /* =========================================
-DATE
+   DATE
 ========================================= */
 
 .date {
 
+    font-family:
+        'Bodoni Moda',
+        'Didot',
+        serif;
 
-font-family:
-    'Bodoni Moda',
-    'Didot',
-    serif;
+    font-weight: 700;
 
-font-weight: 700;
+    font-style: italic;
 
-font-style: italic;
+    display: flex;
 
-display: flex;
+    justify-content: center;
 
-justify-content: center;
+    align-items: center;
 
-align-items: center;
+    gap: 25px;
 
-gap: 25px;
-
-color: #80618f;
-
+    color: #80618f;
 
 }
 
 .date span {
 
+    font-size: 13px;
 
-font-size: 13px;
-
-letter-spacing: 2px;
-
+    letter-spacing: 2px;
 
 }
 
 .date strong {
 
+    font-family:
+        Georgia,
+        serif;
 
-font-family:
-    Georgia,
-    serif;
+    font-size: 45px;
 
-font-size: 45px;
-
-font-weight: normal;
-
+    font-weight: normal;
 
 }
 
+
 /* =========================================
-VENUE
+   VENUE
 ========================================= */
 
 .venue-section {
 
+    width: 100%;
 
-width: 100%;
+    margin-top: 25px;
 
-margin-top: 25px;
-
-color: #4e3f55;
-
+    color: #4e3f55;
 
 }
 
 .venue-top {
 
+    font-family:
+        'Bodoni Moda',
+        'Didot',
+        serif;
 
-font-family:
-    'Bodoni Moda',
-    'Didot',
-    serif;
+    font-weight: 700;
 
-font-weight: 700;
+    font-style: italic;
 
-font-style: italic;
+    display: grid;
 
-display: grid;
+    grid-template-columns:
+        1fr 1fr;
 
-grid-template-columns:
-    1fr 1fr;
+    text-align: center;
 
-text-align: center;
+    font-size: 13px;
 
-font-size: 13px;
-
-letter-spacing: 2px;
+    letter-spacing: 2px;
 
 }
 
 .venue-line {
 
+    width: 1px;
 
-width: 1px;
+    height: 30px;
 
-height: 30px;
+    background-color: #332e36;
 
-background-color: #332e36;
-
-margin: 5px auto 0;
-
+    margin: 5px auto 0;
 
 }
 
 .venue-bottom {
 
-font-family:
-    'Bodoni Moda',
-    'Didot',
-    serif;
+    font-family:
+        'Bodoni Moda',
+        'Didot',
+        serif;
 
-font-weight: 700;
+    font-weight: 700;
 
-font-style: italic;
+    font-style: italic;
 
-display: grid;
+    display: grid;
 
-grid-template-columns:
-    1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
-text-align: center;
+    text-align: center;
 
-font-size: 12px;
+    font-size: 12px;
 
-letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
 
-color: #49245c;
-
+    color: #49245c;
 
 }
 
+
 /* =========================================
-YEAR
+   YEAR / TIME
 ========================================= */
 
 .time {
 
+    font-family:
+        'Bodoni Moda',
+        'Didot',
+        serif;
 
-font-family:
-    'Bodoni Moda',
-    'Didot',
-    serif;
+    font-weight: 700;
 
-font-weight: 700;
+    font-style: italic;
 
-font-style: italic;
+    margin-top: 20px;
 
-margin-top: 20px;
+    font-size: 20px;
 
-font-size: 20px;
-
-letter-spacing: 3px;
-
+    letter-spacing: 3px;
 
 }
 
+
 /* =========================================
-VIEW DETAILS BUTTON
+   VIEW DETAILS BUTTON
 ========================================= */
 
 .details-button {
 
+    font-family:
+        'Bodoni Moda',
+        'Didot',
+        serif;
 
-font-family:
-    'Bodoni Moda',
-    'Didot',
-    serif;
+    font-weight: 700;
 
-font-weight: 700;
+    font-style: italic;
 
-font-style: italic;
+    margin-top: 35px;
 
-margin-top: 35px;
+    padding: 12px 25px;
 
-padding: 12px 25px;
+    border: none;
 
-border: none;
+    border-radius: 25px;
 
-border-radius: 25px;
+    background: #9b719e;
 
-background: #9b719e;
+    color: white;
 
-color: white;
+    font-size: 12px;
 
-font-size: 12px;
+    letter-spacing: 2px;
 
-letter-spacing: 2px;
+    cursor: pointer;
 
-cursor: pointer;
-
-transition:
-    all 0.3s ease;
-
+    transition:
+        all 0.3s ease;
 
 }
 
 .details-button:hover {
 
-background: #80618f;
+    background: #80618f;
 
-transform:
-    translateY(-2px);
-
+    transform:
+        translateY(-2px);
 
 }
 
 .details-button:active {
 
-transform:
-    scale(0.95);
-
+    transform:
+        scale(0.95);
 
 }
 
+
 /* =========================================
-DETAILS
+   DETAILS
 ========================================= */
 
 .details {
 
-width: 100%;
+    width: 100%;
 
-max-height: 0;
+    max-height: 0;
 
-overflow: hidden;
+    overflow: hidden;
 
-opacity: 0;
+    opacity: 0;
 
-color: #3e2b47;
+    color: #3e2b47;
 
-font-family:
-    Georgia,
-    serif;
+    font-family:
+        Georgia,
+        serif;
 
-font-size: 15px;
+    font-size: 15px;
 
-line-height: 1.8;
+    line-height: 1.8;
 
-margin-left: auto;
+    margin-left: auto;
 
-margin-right: auto;
+    margin-right: auto;
 
-transition:
-    max-height 0.7s ease,
-    opacity 0.5s ease;
+    transition:
+        max-height 0.7s ease,
+        opacity 0.5s ease;
 
 }
 
 .details.show {
 
-max-height: 10000px;
+    max-height: 10000px;
 
-overflow: visible;
+    overflow: visible;
 
-opacity: 1;
+    opacity: 1;
 
-margin-top: 25px;
-
+    margin-top: 25px;
 
 }
 
 .details p {
 
-margin-bottom: 15px;
+    margin-bottom: 15px;
 
-letter-spacing: 2px;
+    letter-spacing: 2px;
 
-color: #1f032e;
+    color: #1f032e;
 
-font-family:
-    Georgia,
-    serif;
+    font-family:
+        Georgia,
+        serif;
 
-font-size: 15px;
+    font-size: 15px;
 
-line-height: 1.2;
-
+    line-height: 1.2;
 
 }
 
+
 /* =========================================
-WEDDING PARTY
+   WEDDING PARTY
 ========================================= */
 
 .wedding-party {
 
+    width: 100%;
 
-width: 100%;
+    max-width: 900px;
 
-max-width: 900px;
+    margin: 60px auto 40px;
 
-margin: 60px auto 40px;
-
-text-align: center;
-
+    text-align: center;
 
 }
 
+
 /* =========================================
-PARTY SECTION
+   PARTY SECTION
 ========================================= */
 
 .party-section {
 
+    width: 100%;
 
-width: 100%;
+    margin: 0 auto 60px;
 
-margin: 0 auto 60px;
-
-text-align: center;
-
+    text-align: center;
 
 }
 
 .party-section h2 {
 
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
 
-font-family:
-    "Times New Roman",
-    Times,
-    serif;
+    font-size: 26px;
 
-font-size: 26px;
+    letter-spacing: 3px;
 
-letter-spacing: 3px;
+    margin-bottom: 20px;
 
-margin-bottom: 20px;
+    text-transform: uppercase;
 
-text-transform: uppercase;
-
-color: #593968;
-
+    color: #593968;
 
 }
 
+
 /* =========================================
-TABLE WRAPPER
+   TABLE WRAPPER
 ========================================= */
 
 .party-table-wrapper {
 
-width: 100%;
+    width: 100%;
 
-overflow-x: auto;
+    overflow-x: auto;
 
-margin: 0 auto;
+    margin: 0 auto;
 
-border-radius: 16px;
+    border-radius: 16px;
 
-box-shadow:
-    0 10px 25px
-    rgba(
-        90,
-        55,
-        105,
-        0.13
-    );
-
+    box-shadow:
+        0 10px 25px
+        rgba(
+            90,
+            55,
+            105,
+            0.13
+        );
 
 }
 
+
 /* =========================================
-WEDDING PARTY TABLE
+   WEDDING PARTY TABLE
 ========================================= */
 
 .party-table {
 
+    width: 100%;
 
-width: 100%;
+    border-collapse: separate;
 
-border-collapse: separate;
+    border-spacing: 0;
 
-border-spacing: 0;
+    overflow: hidden;
 
-overflow: hidden;
+    border:
+        1px solid
+        rgba(
+            130,
+            95,
+            145,
+            0.28
+        );
 
-border:
-    1px solid
-    rgba(
-        130,
-        95,
-        145,
-        0.28
-    );
+    border-radius: 16px;
 
-border-radius: 16px;
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
 
-background:
-    rgba(
-        255,
-        255,
-        255,
-        0.55
-    );
-
-font-family:
-    "Times New Roman",
-    Times,
-    serif;
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
 
 }
 
+
 /* =========================================
-TABLE HEADER
-FIRST ROW = DIFFERENT COLOR
+   TABLE HEADER
 ========================================= */
 
 .party-table thead th {
 
+    padding:
+        15px 12px;
 
-padding:
-    15px 12px;
+    background:
+        linear-gradient(
+            135deg,
+            #a98ab6,
+            #8f6c9d
+        );
 
-background:
-    linear-gradient(
-        135deg,
-        #a98ab6,
-        #8f6c9d
-    );
+    color: #ffffff;
 
-color: #ffffff;
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
 
-font-family:
-    "Times New Roman",
-    Times,
-    serif;
+    font-size: 16px;
 
-font-size: 16px;
+    font-weight: bold;
 
-font-weight: bold;
+    letter-spacing: 1.5px;
 
-letter-spacing: 1.5px;
+    text-transform: uppercase;
 
-text-transform: uppercase;
-
-border-bottom:
-    2px solid
-    rgba(
-        255,
-        255,
-        255,
-        0.35
-    );
+    border-bottom:
+        2px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        );
 
 }
-
-/* =========================================
-FIRST HEADER CELL
-========================================= */
 
 .party-table thead th:first-child {
 
-border-top-left-radius: 14px;
+    border-top-left-radius: 14px;
 
 }
-
-/* =========================================
-LAST HEADER CELL
-========================================= */
 
 .party-table thead th:last-child {
 
-
-border-top-right-radius: 14px;
-
+    border-top-right-radius: 14px;
 
 }
 
+
 /* =========================================
-TABLE BODY CELLS
+   TABLE BODY
 ========================================= */
 
 .party-table tbody td {
 
-padding:
-    13px 12px;
+    padding:
+        13px 12px;
 
-font-size: 16px;
+    font-size: 16px;
 
-line-height: 1.5;
+    line-height: 1.5;
 
-color: #4c3456;
+    color: #4c3456;
 
-border-bottom:
-    1px solid
-    rgba(
-        130,
-        95,
-        145,
-        0.15
-    );
-
+    border-bottom:
+        1px solid
+        rgba(
+            130,
+            95,
+            145,
+            0.15
+        );
 
 }
 
+
 /* =========================================
-ALTERNATING ROWS
+   ALTERNATING ROWS
 ========================================= */
 
 .party-table tbody tr:nth-child(odd) td {
 
-
-background:
-    rgba(
-        255,
-        255,
-        255,
-        0.72
-    );
-
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
 
 }
 
 .party-table tbody tr:nth-child(even) td {
 
-
-background:
-    rgba(
-        237,
-        224,
-        243,
-        0.75
-    );
-
+    background:
+        rgba(
+            237,
+            224,
+            243,
+            0.75
+        );
 
 }
 
+
 /* =========================================
-SECOND COLUMN ALTERNATING COLOR
+   SECOND COLUMN
 ========================================= */
 
 .party-table tbody td:nth-child(2) {
 
-
-background:
-    rgba(
-        220,
-        201,
-        229,
-        0.55
-    );
+    background:
+        rgba(
+            220,
+            201,
+            229,
+            0.55
+        );
 
 }
 
 .party-table tbody tr:nth-child(even) td:nth-child(2) {
 
-
-background:
-    rgba(
-        207,
-        185,
-        220,
-        0.65
-    );
-
+    background:
+        rgba(
+            207,
+            185,
+            220,
+            0.65
+        );
 
 }
 
+
 /* =========================================
-TABLE HOVER
+   TABLE HOVER
 ========================================= */
 
 .party-table tbody tr {
 
-
-transition:
-    all 0.25s ease;
-
+    transition:
+        all 0.25s ease;
 
 }
 
 .party-table tbody tr:hover td {
 
-background:
-    rgba(
-        207,
-        185,
-        220,
-        0.75
-    );
+    background:
+        rgba(
+            207,
+            185,
+            220,
+            0.75
+        );
 
 }
 
+
 /* =========================================
-LAST ROW
+   LAST ROW
 ========================================= */
 
 .party-table tbody tr:last-child td {
 
-
-border-bottom: none;
-
+    border-bottom: none;
 
 }
 
-/* =========================================
-LAST BODY CORNERS
-========================================= */
-
 .party-table tbody tr:last-child td:first-child {
 
-
-border-bottom-left-radius: 14px;
-
+    border-bottom-left-radius: 14px;
 
 }
 
 .party-table tbody tr:last-child td:last-child {
 
-border-bottom-right-radius: 14px;
+    border-bottom-right-radius: 14px;
 
 }
 
+
 /* =========================================
-PARTY SUBTITLE
+   PARTY SUBTITLE
 ========================================= */
 
 .party-subtitle {
 
-font-family:
-    "Times New Roman",
-    Times,
-    serif;
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
 
-font-size: 14px;
+    font-size: 14px;
 
-font-style: italic;
+    font-style: italic;
 
-margin-top: -8px;
+    margin-top: -8px;
 
-margin-bottom: 20px;
+    margin-bottom: 20px;
 
-color: #80618f;
+    color: #80618f;
 
 }
 
+
 /* =========================================
-ENTOURAGE
+   ENTOURAGE
 ========================================= */
 
 .entourage-section {
 
-width: 100%;
-
+    width: 100%;
 
 }
 
 .entourage-title {
 
+    margin-top: 25px;
 
-margin-top: 25px;
+    margin-bottom: 12px;
 
-margin-bottom: 12px;
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
 
-font-family:
-    "Times New Roman",
-    Times,
-    serif;
+    font-size: 18px;
 
-font-size: 18px;
+    letter-spacing: 2px;
 
-letter-spacing: 2px;
+    text-transform: uppercase;
 
-text-transform: uppercase;
-
-color: #80618f;
+    color: #80618f;
 
 }
 
 .entourage-table-container {
 
+    width: 100%;
 
-width: 100%;
-
-margin-bottom: 35px;
-
+    margin-bottom: 35px;
 
 }
 
 .entourage-table {
 
-
-width: 100%;
+    width: 100%;
 
 }
 
+
 /* =========================================
-DRESS CODE
+   DRESS CODE
 ========================================= */
 
 .dress-code {
 
-display: flex;
+    display: flex;
 
-align-items: center;
+    align-items: center;
 
-font-size: 18px;
+    font-size: 18px;
 
-color: #2d143c;
+    color: #2d143c;
 
-margin: 20px 0;
+    margin: 20px 0;
 
 }
 
 .dress-code div {
 
+    flex: 1;
 
-flex: 1;
+    height: 2px;
 
-height: 2px;
-
-background-color: #a58bb5;
+    background-color: #a58bb5;
 
 }
 
 .dress-code span {
 
-padding:
-    0 15px;
+    padding:
+        0 15px;
 
-font-family:
-    Georgia,
-    serif;
+    font-family:
+        Georgia,
+        serif;
 
-font-size: 20px;
+    font-size: 20px;
 
-line-height: 1.8;
-
+    line-height: 1.8;
 
 }
 
+
 /* =========================================
-COLOR PALETTE
+   COLOR PALETTE
 ========================================= */
 
 .palette-title {
 
+    letter-spacing: 5px;
 
-letter-spacing: 5px;
+    margin-top: 10px;
 
-margin-top: 10px;
-
-margin-bottom: 10px;
-
+    margin-bottom: 10px;
 
 }
 
 .palette-image {
 
+    max-width: 100%;
 
-max-width: 100%;
+    height: auto;
 
-height: auto;
+    display: block;
 
-display: block;
-
-margin: 0 auto;
+    margin: 0 auto;
 
 }
 
+
 /* =========================================
-COMMENTS SECTION
+   COMMENTS SECTION
 ========================================= */
 
 .comments-section {
 
+    position: relative;
 
-position: relative;
+    width: 100%;
 
-margin-top: 45px;
+    max-width: 850px;
 
-padding:
-    38px 25px 30px;
+    margin: 50px auto 30px;
 
-border-radius: 25px;
+    padding:
+        38px 25px 30px;
 
-background:
-    linear-gradient(
-        145deg,
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(
+                255,
+                255,
+                255,
+                0.65
+            ),
+            rgba(
+                238,
+                219,
+                244,
+                0.55
+            )
+        );
+
+    border:
+        1px solid
         rgba(
-            255,
-            255,
-            255,
-            0.65
+            165,
+            139,
+            181,
+            0.45
+        );
+
+    box-shadow:
+
+        0 20px 45px
+        rgba(
+            90,
+            55,
+            105,
+            0.16
         ),
+
+        inset 0 1px 0
         rgba(
-            238,
-            219,
-            244,
-            0.55
-        )
-    );
+            255,
+            255,
+            255,
+            0.8
+        );
 
-border:
-    1px solid
-    rgba(
-        165,
-        139,
-        181,
-        0.45
-    );
+    backdrop-filter:
+        blur(12px);
 
-box-shadow:
+    -webkit-backdrop-filter:
+        blur(12px);
 
-    0 20px 45px
-    rgba(
-        90,
-        55,
-        105,
-        0.16
-    ),
-
-    inset 0 1px 0
-    rgba(
-        255,
-        255,
-        255,
-        0.8
-    );
-
-backdrop-filter:
-    blur(12px);
-
--webkit-backdrop-filter:
-    blur(12px);
-
-overflow: hidden;
+    overflow: hidden;
 
 }
 
+
 /* =========================================
-DECORATIVE GLOW
+   COMMENTS GLOW
 ========================================= */
 
 .comments-section::before {
 
-content: "";
+    content: "";
 
-position: absolute;
+    position: absolute;
 
-width: 180px;
+    width: 180px;
 
-height: 180px;
+    height: 180px;
 
-top: -90px;
+    top: -90px;
 
-left: -70px;
+    left: -70px;
 
-border-radius: 50%;
+    border-radius: 50%;
 
-background:
-    rgba(
-        210,
-        174,
-        222,
-        0.28
-    );
+    background:
+        rgba(
+            210,
+            174,
+            222,
+            0.28
+        );
 
-filter:
-    blur(25px);
+    filter:
+        blur(25px);
 
-pointer-events: none;
-
+    pointer-events: none;
 
 }
 
 .comments-section::after {
 
+    content: "♥";
 
-content: "♥";
+    position: absolute;
 
-position: absolute;
+    top: 12px;
 
-top: 12px;
+    right: 20px;
 
-right: 20px;
+    color:
+        rgba(
+            165,
+            139,
+            181,
+            0.25
+        );
 
-color:
-    rgba(
-        165,
-        139,
-        181,
-        0.25
-    );
+    font-size: 30px;
 
-font-size: 30px;
-
-animation:
-    luxuryHeart
-    3s ease-in-out infinite;
+    animation:
+        luxuryHeart
+        3s ease-in-out infinite;
 
 }
 
 @keyframes luxuryHeart {
 
+    0%,
+    100% {
 
-0%,
-100% {
+        transform:
+            translateY(0)
+            rotate(-8deg);
 
-    transform:
-        translateY(0)
-        rotate(-8deg);
+        opacity: 0.35;
 
-    opacity: 0.35;
+    }
+
+    50% {
+
+        transform:
+            translateY(-7px)
+            rotate(8deg);
+
+        opacity: 0.8;
+
+    }
+
 }
 
-50% {
-
-    transform:
-        translateY(-7px)
-        rotate(8deg);
-
-    opacity: 0.8;
-}
-
-}
 
 /* =========================================
-COMMENTS TITLE
+   COMMENTS TITLE
 ========================================= */
 
 .comments-title {
 
+    position: relative;
 
-position: relative;
+    color: #80618f;
 
-color: #80618f;
+    font-family:
+        Georgia,
+        serif;
 
-font-family:
-    Georgia,
-    serif;
+    font-size: 28px;
 
-font-size: 28px;
+    font-weight: normal;
 
-font-weight: normal;
+    letter-spacing: 2px;
 
-letter-spacing: 2px;
+    margin-bottom: 10px;
 
-margin-bottom: 10px;
-
-text-shadow:
-    0 2px 8px
-    rgba(
-        128,
-        97,
-        143,
-        0.18
-    );
+    text-shadow:
+        0 2px 8px
+        rgba(
+            128,
+            97,
+            143,
+            0.18
+        );
 
 }
 
 .comments-title::after {
 
-content: "";
+    content: "";
 
-display: block;
+    display: block;
 
-width: 55px;
+    width: 55px;
 
-height: 1px;
+    height: 1px;
 
-margin:
-    12px auto 0;
+    margin:
+        12px auto 0;
 
-background:
-    linear-gradient(
-        to right,
-        transparent,
-        #a58bb5,
-        transparent
-    );
-
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #a58bb5,
+            transparent
+        );
 
 }
-
-/* =========================================
-COMMENTS SUBTITLE
-========================================= */
 
 .comments-subtitle {
 
-color: #91779e;
+    margin-bottom: 25px;
 
-font-family:
-    Georgia,
-    serif;
+    color: #91779e;
 
-font-size: 14px;
+    font-family:
+        Georgia,
+        serif;
 
-font-style: italic;
+    font-size: 14px;
 
-letter-spacing: 1px;
+    font-style: italic;
 
-line-height: 1.7;
+    letter-spacing: 1px;
 
-margin-bottom: 25px;
-
+    line-height: 1.7;
 
 }
 
+
 /* =========================================
-COMMENT FORM
+   COMMENT FORM
 ========================================= */
 
 .comment-form {
 
+    position: relative;
 
-position: relative;
+    width: 100%;
 
-display: flex;
+    max-width: 650px;
 
-flex-direction: column;
+    margin: 0 auto 20px;
 
-gap: 14px;
+    display: flex;
 
-align-items: center;
+    flex-direction: column;
 
+    gap: 14px;
+
+    align-items: center;
 
 }
 
+
 /* =========================================
-INPUTS
+   INPUTS
 ========================================= */
 
 .comment-form input,
 .comment-form textarea {
 
-width: 100%;
+    width: 100%;
 
-padding:
-    15px 18px;
+    padding:
+        15px 18px;
 
-border:
-    1px solid
-    rgba(
-        155,
-        126,
-        170,
-        0.35
-    );
+    border:
+        1px solid
+        rgba(
+            155,
+            126,
+            170,
+            0.35
+        );
 
-border-radius: 14px;
+    border-radius: 14px;
 
-background:
-    rgba(
-        255,
-        255,
-        255,
-        0.55
-    );
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
 
-color: #80618f;
+    color: #80618f;
 
-font-family:
-    Georgia,
-    serif;
+    font-family:
+        Georgia,
+        serif;
 
-font-size: 14px;
+    font-size: 14px;
 
-outline: none;
+    outline: none;
 
-text-align: center;
+    text-align: center;
 
-box-shadow:
-    inset 0 2px 8px
-    rgba(
-        100,
-        70,
-        110,
-        0.05
-    );
+    box-shadow:
+        inset 0 2px 8px
+        rgba(
+            100,
+            70,
+            110,
+            0.05
+        );
 
-transition:
-    all 0.4s ease;
-
+    transition:
+        all 0.4s ease;
 
 }
 
 .comment-form input::placeholder,
 .comment-form textarea::placeholder {
 
-color: #a58bb5;
+    color: #a58bb5;
 
-font-family:
-    Georgia,
-    serif;
+    font-family:
+        Georgia,
+        serif;
 
-font-style: italic;
+    font-style: italic;
 
 }
 
 .comment-form input:hover,
 .comment-form textarea:hover {
 
-background:
-    rgba(
-        255,
-        255,
-        255,
-        0.75
-    );
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.75
+        );
 
-border-color:
-    rgba(
-        155,
-        113,
-        158,
-        0.55
-    );
+    border-color:
+        rgba(
+            155,
+            113,
+            158,
+            0.55
+        );
 
-transform:
-    translateY(-1px);
+    transform:
+        translateY(-1px);
 
 }
 
 .comment-form input:focus,
 .comment-form textarea:focus {
 
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.85
+        );
 
-background:
-    rgba(
-        255,
-        255,
-        255,
-        0.85
-    );
+    border-color: #9b719e;
 
-border-color: #9b719e;
+    box-shadow:
 
-box-shadow:
+        0 0 0 3px
+        rgba(
+            155,
+            113,
+            158,
+            0.10
+        ),
 
-    0 0 0 3px
-    rgba(
-        155,
-        113,
-        158,
-        0.10
-    ),
+        0 8px 20px
+        rgba(
+            100,
+            70,
+            110,
+            0.10
+        );
 
-    0 8px 20px
-    rgba(
-        100,
-        70,
-        110,
-        0.10
-    );
-
-transform:
-    translateY(-2px);
+    transform:
+        translateY(-2px);
 
 }
 
 .comment-form textarea {
 
+    min-height: 125px;
 
-min-height: 125px;
-
-resize: vertical;
-
+    resize: vertical;
 
 }
 
+
 /* =========================================
-POST BUTTON
+   POST BUTTON
 ========================================= */
 
 .comment-form button {
 
-position: relative;
+    position: relative;
 
-overflow: hidden;
+    overflow: hidden;
 
-padding:
-    14px 25px;
+    width: 100%;
 
-border:
-    1px solid
-    rgba(
-        255,
-        255,
-        255,
-        0.5
-    );
+    padding:
+        14px 25px;
 
-border-radius: 30px;
-
-background:
-    linear-gradient(
-        135deg,
-        #b28dbb,
-        #8f6599,
-        #b28dbb
-    );
-
-background-size:
-    200% 200%;
-
-color: white;
-
-font-family:
-    Georgia,
-    serif;
-
-font-size: 12px;
-
-letter-spacing: 3px;
-
-cursor: pointer;
-
-margin-left: auto;
-margin-right: auto;
-
-box-shadow:
-    0 8px 20px
-    rgba(
-        128,
-        97,
-        143,
-        0.25
-    );
-
-transition:
-    all 0.4s ease;
-
-animation:
-    buttonGlow
-    3s ease-in-out infinite;
-
-
-}
-
-.comment-form button::before {
-
-
-content: "";
-
-position: absolute;
-
-top: 0;
-
-left: -100%;
-
-width: 70%;
-
-height: 100%;
-
-background:
-    linear-gradient(
-        90deg,
-        transparent,
+    border:
+        1px solid
         rgba(
             255,
             255,
             255,
-            0.45
-        ),
-        transparent
-    );
+            0.5
+        );
 
-transform:
-    skewX(-20deg);
+    border-radius: 30px;
 
-transition:
-    0.6s;
+    background:
+        linear-gradient(
+            135deg,
+            #b28dbb,
+            #8f6599,
+            #b28dbb
+        );
 
+    background-size:
+        200% 200%;
 
-}
+    color: white;
 
-.comment-form button:hover::before {
+    font-family:
+        Georgia,
+        serif;
 
-left: 130%;
+    font-size: 12px;
 
-}
+    letter-spacing: 3px;
 
-.comment-form button:hover {
-
-background-position:
-    right center;
-
-transform:
-    translateY(-3px);
-
-box-shadow:
-    0 12px 28px
-    rgba(
-        128,
-        97,
-        143,
-        0.35
-    );
-
-}
-
-.comment-form button:active {
-
-
-transform:
-    scale(0.97);
-
-
-}
-
-@keyframes buttonGlow {
-
-0%,
-100% {
+    cursor: pointer;
 
     box-shadow:
         0 8px 20px
@@ -1803,32 +1689,169 @@ transform:
             128,
             97,
             143,
-            0.20
+            0.25
         );
+
+    transition:
+        all 0.4s ease;
+
+    animation:
+        buttonGlow
+        3s ease-in-out infinite;
+
 }
 
-50% {
+.comment-form button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(
+                255,
+                255,
+                255,
+                0.45
+            ),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        0.6s;
+
+}
+
+.comment-form button:hover::before {
+
+    left: 130%;
+
+}
+
+.comment-form button:hover {
+
+    background-position:
+        right center;
+
+    transform:
+        translateY(-3px);
 
     box-shadow:
-        0 8px 28px
+        0 12px 28px
         rgba(
             128,
             97,
             143,
-            0.40
+            0.35
         );
 
+}
+
+.comment-form button:active {
+
+    transform:
+        scale(0.97);
 
 }
+
+.comment-form button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
 }
+
+@keyframes buttonGlow {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 8px 20px
+            rgba(
+                128,
+                97,
+                143,
+                0.20
+            );
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 8px 28px
+            rgba(
+                128,
+                97,
+                143,
+                0.40
+            );
+
+    }
+
+}
+
+
 /* =========================================
-MESSAGES LIST
+   COMMENT STATUS
 ========================================= */
 
-.comments-list-section{
+.comment-status {
+
+    min-height: 24px;
+
+    margin:
+        10px auto 20px;
+
+    color: #80618f;
+
+    font-size: 14px;
+
+}
+
+.comment-status.success {
+
+    color: #66835f;
+
+}
+
+.comment-status.error {
+
+    color: #a45f68;
+
+}
 
 
-    margin-top: 38px;
+/* =========================================
+   COMMENTS LIST
+========================================= */
+
+.comments-list-section {
+
+    width: 100%;
+
+    max-width: 750px;
+
+    margin:
+        30px auto 0;
 
     padding-top: 25px;
 
@@ -1841,1076 +1864,728 @@ MESSAGES LIST
             0.15
         );
 
-
 }
 
 .comments-list-section h3 {
 
-color: #80618f;
+    margin-bottom: 20px;
 
-font-family:
-    Georgia,
-    serif;
+    color: #80618f;
 
-font-size: 21px;
+    font-family:
+        Georgia,
+        serif;
 
-font-weight: normal;
+    font-size: 21px;
 
-letter-spacing: 2px;
+    font-weight: normal;
 
-margin-bottom: 20px;
-
+    letter-spacing: 2px;
 
 }
 
+#commentsList {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
 /* =========================================
-COMMENT BOX
+   COMMENT BOX
 ========================================= */
 
 .comment-box {
 
+    position: relative;
 
-position: relative;
+    width: 100%;
 
-text-align: center;
+    padding:
+        20px 20px 17px;
 
-padding:
-    20px 20px 17px;
+    text-align: center;
 
-margin-bottom: 17px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(
+                255,
+                255,
+                255,
+                0.70
+            ),
+            rgba(
+                245,
+                232,
+                248,
+                0.60
+            )
+        );
 
-border-radius: 16px;
-
-background:
-    linear-gradient(
-        135deg,
+    border:
+        1px solid
         rgba(
-            255,
-            255,
-            255,
-            0.70
-        ),
+            165,
+            139,
+            181,
+            0.25
+        );
+
+    border-left:
+        3px solid
+        #a58bb5;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 20px
         rgba(
-            245,
-            232,
-            248,
-            0.60
-        )
-    );
+            100,
+            70,
+            110,
+            0.09
+        );
 
-border:
-    1px solid
-    rgba(
-        165,
-        139,
-        181,
-        0.25
-    );
+    backdrop-filter:
+        blur(8px);
 
-border-left:
-    3px solid
-    #a58bb5;
+    -webkit-backdrop-filter:
+        blur(8px);
 
-box-shadow:
-    0 8px 20px
-    rgba(
-        100,
-        70,
-        110,
-        0.09
-    );
+    word-wrap: break-word;
 
-backdrop-filter:
-    blur(8px);
+    overflow-wrap: anywhere;
 
--webkit-backdrop-filter:
-    blur(8px);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 
-transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-
-animation:
-    messageAppear
-    0.6s ease;
-
+    animation:
+        messageAppear
+        0.6s ease;
 
 }
 
 .comment-box:hover {
 
+    transform:
+        translateY(-4px);
 
-transform:
-    translateY(-4px);
-
-box-shadow:
-    0 14px 28px
-    rgba(
-        100,
-        70,
-        110,
-        0.15
-    );
-
+    box-shadow:
+        0 14px 28px
+        rgba(
+            100,
+            70,
+            110,
+            0.15
+        );
 
 }
 
 .comment-box::after {
 
+    content: "♥";
 
-content: "♥";
+    position: absolute;
 
-position: absolute;
+    top: 13px;
 
-top: 13px;
+    right: 17px;
 
-right: 17px;
+    font-size: 15px;
 
-font-size: 15px;
-
-color:
-    rgba(
-        165,
-        139,
-        181,
-        0.45
-    );
+    color:
+        rgba(
+            165,
+            139,
+            181,
+            0.45
+        );
 
 }
 
 .comment-box h4 {
 
+    color: #80618f;
 
-color: #80618f;
+    font-family:
+        Georgia,
+        serif;
 
-font-family:
-    Georgia,
-    serif;
+    font-size: 17px;
 
-font-size: 17px;
+    font-weight: normal;
 
-font-weight: normal;
+    letter-spacing: 1px;
 
-letter-spacing: 1px;
+    margin-bottom: 9px;
 
-margin-bottom: 9px;
-
-text-align: center;
-
+    text-align: center;
 
 }
 
 .comment-box p {
 
-color: #91779e;
+    color: #91779e;
 
-font-family:
-    Georgia,
-    serif;
+    font-family:
+        Georgia,
+        serif;
 
-font-size: 14px;
+    font-size: 14px;
 
-line-height: 1.7;
+    line-height: 1.7;
 
-letter-spacing: 0;
+    margin-bottom: 10px;
 
-margin-bottom: 10px;
+    word-wrap: break-word;
 
-word-wrap: break-word;
+    text-align: center;
 
-text-align: center;
+    white-space: pre-wrap;
 
 }
 
 .comment-box small {
 
-color: #b09db8;
+    display: block;
 
-font-family:
-    Arial,
-    sans-serif;
+    color: #b09db8;
 
-font-size: 10px;
+    font-family:
+        Arial,
+        sans-serif;
 
-letter-spacing: 0.5px;
+    font-size: 10px;
 
-text-align: center;
+    letter-spacing: 0.5px;
+
+    text-align: center;
 
 }
 
 @keyframes messageAppear {
 
-from {
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   SCROLL REVEAL ANIMATIONS
+========================================= */
+
+/*
+   Everything with .scroll-reveal starts
+   slightly lower and invisible.
+*/
+
+.scroll-reveal {
 
     opacity: 0;
 
     transform:
-        translateY(15px)
-        scale(0.98);
+        translateY(60px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+    will-change:
+        opacity,
+        transform;
+
 }
 
-to {
+.scroll-reveal.show {
 
     opacity: 1;
 
     transform:
-        translateY(0)
-        scale(1);
-}
+        translateY(0);
 
 }
+
 
 /* =========================================
-FINAL CENTERING
+   SLIDE FROM LEFT
 ========================================= */
 
-.content,
-.content * {
+.scroll-left {
 
-text-align: center;
+    opacity: 0;
 
+    transform:
+        translateX(-70px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+    will-change:
+        opacity,
+        transform;
+
+}
+
+.scroll-left.show {
+
+    opacity: 1;
+
+    transform:
+        translateX(0);
 
 }
 
-.details,
-.wedding-party {
-
-width: 100%;
-
-margin-left: auto;
-
-margin-right: auto;
-
-
-}
 
 /* =========================================
-MOBILE
+   SLIDE FROM RIGHT
+========================================= */
+
+.scroll-right {
+
+    opacity: 0;
+
+    transform:
+        translateX(70px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+    will-change:
+        opacity,
+        transform;
+
+}
+
+.scroll-right.show {
+
+    opacity: 1;
+
+    transform:
+        translateX(0);
+
+}
+
+
+/* =========================================
+   ZOOM IN
+========================================= */
+
+.scroll-zoom {
+
+    opacity: 0;
+
+    transform:
+        scale(0.85);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+    will-change:
+        opacity,
+        transform;
+
+}
+
+.scroll-zoom.show {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+
+}
+
+
+/* =========================================
+   MOBILE
 ========================================= */
 
 @media (max-width: 500px) {
 
+    .invitation {
 
-.invitation {
+        padding:
+            25px 12px;
 
-    padding:
-        25px 12px;
+    }
+
+    .content {
+
+        padding:
+            40px 15px;
+
+    }
+
+    .content::before {
+
+        background-size:
+            100% auto;
+
+        background-position:
+            top center;
+
+        background-repeat:
+            repeat-y;
+
+    }
+
+    h1 {
+
+        font-size: 32px;
+
+    }
+
+    h1 span {
+
+        font-size: 20px;
+
+    }
+
+    .date {
+
+        gap: 15px;
+
+    }
+
+    .date strong {
+
+        font-size: 45px;
+
+    }
+
+    .venue-top {
+
+        font-size: 11px;
+
+    }
+
+    .venue-bottom {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .venue-line {
+
+        height: 30px;
+
+    }
+
+    .time {
+
+        font-size: 45px;
+
+    }
+
+    .dress-code span {
+
+        font-size: 15px;
+
+        padding:
+            0 8px;
+
+    }
+
+    .petal {
+
+        max-width: 35px;
+
+    }
+
+
+    /* =====================================
+       MOBILE WEDDING TABLES
+    ===================================== */
+
+    .wedding-party {
+
+        width: 100%;
+
+        margin-top: 45px;
+
+    }
+
+    .party-section {
+
+        margin-bottom: 45px;
+
+    }
+
+    .party-section h2 {
+
+        font-size: 20px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 15px;
+
+    }
+
+    .party-table-wrapper {
+
+        width: 100%;
+
+        overflow-x: hidden;
+
+    }
+
+    .party-table {
+
+        width: 100%;
+
+        table-layout: fixed;
+
+    }
+
+    .party-table thead th {
+
+        padding:
+            11px 6px;
+
+        font-size: 12px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .party-table tbody td {
+
+        padding:
+            11px 6px;
+
+        font-size: 13px;
+
+        line-height: 1.4;
+
+        word-break: normal;
+
+        overflow-wrap: break-word;
+
+    }
+
+    .party-subtitle {
+
+        font-size: 12px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    /* =====================================
+       MOBILE ENTOURAGE
+    ===================================== */
+
+    .entourage-title {
+
+        font-size: 14px;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 10px;
+
+    }
+
+    .entourage-table-container {
+
+        margin-bottom: 28px;
+
+    }
+
+    .entourage-table thead th {
+
+        font-size: 11px;
+
+        padding:
+            11px 5px;
+
+    }
+
+    .entourage-table tbody td {
+
+        font-size: 12px;
+
+        padding:
+            10px 5px;
+
+    }
+
+
+    /* =====================================
+       MOBILE COMMENTS
+    ===================================== */
+
+    .comments-section {
+
+        margin-top: 35px;
+
+        padding:
+            30px 17px 25px;
+
+        border-radius: 22px;
+
+    }
+
+    .comments-title {
+
+        font-size: 23px;
+
+    }
+
+    .comments-subtitle {
+
+        font-size: 12px;
+
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+
+        padding:
+            14px 15px;
+
+    }
+
+    .comment-form textarea {
+
+        min-height: 115px;
+
+    }
+
+    .comment-form button {
+
+        padding:
+            13px 18px;
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+    }
+
+    .comment-box {
+
+        padding: 17px;
+
+    }
+
+    .comment-box h4 {
+
+        font-size: 16px;
+
+    }
+
+    .comment-box p {
+
+        font-size: 13px;
+
+    }
+
 }
 
-
-.content {
-
-    padding:
-        40px 15px;
-}
-
-
-.content::before {
-
-    background-size:
-        100% auto;
-
-    background-position:
-        top center;
-
-    background-repeat:
-        repeat-y;
-}
-
-
-h1 {
-
-    font-size: 32px;
-}
-
-
-h1 span {
-
-    font-size: 20px;
-}
-
-
-.date {
-
-    gap: 15px;
-}
-
-
-.date strong {
-
-    font-size: 45px;
-}
-
-
-.venue-top {
-
-    font-size: 11px;
-}
-
-
-.venue-bottom {
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-}
-
-
-.venue-line {
-
-    height: 30px;
-}
-
-
-.time {
-
-    font-size: 45px;
-}
-
-
-.dress-code span {
-
-    font-size: 15px;
-
-    padding:
-        0 8px;
-}
-
-
-.petal {
-
-    max-width: 35px;
-}
-
-
-/* =====================================
-   MOBILE WEDDING TABLES
-===================================== */
-
-.wedding-party {
-
-    width: 100%;
-
-    margin-top: 45px;
-}
-
-
-.party-section {
-
-    margin-bottom: 45px;
-}
-
-
-.party-section h2 {
-
-    font-size: 20px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 15px;
-}
-
-
-.party-table-wrapper {
-
-    width: 100%;
-
-    overflow-x: hidden;
-}
-
-
-.party-table {
-
-    width: 100%;
-
-    table-layout: fixed;
-}
-
-
-.party-table thead th {
-
-    padding:
-        11px 6px;
-
-    font-size: 12px;
-
-    letter-spacing: 1px;
-}
-
-
-.party-table tbody td {
-
-    padding:
-        11px 6px;
-
-    font-size: 13px;
-
-    line-height: 1.4;
-
-    word-break: normal;
-
-    overflow-wrap: break-word;
-}
-
-
-.party-subtitle {
-
-    font-size: 12px;
-
-    margin-bottom: 15px;
-}
-
-
-/* =====================================
-   MOBILE ENTOURAGE
-===================================== */
-
-.entourage-section {
-
-    width: 100%;
-}
-
-
-.entourage-title {
-
-    font-size: 14px;
-
-    letter-spacing: 1.5px;
-
-    margin-bottom: 10px;
-}
-
-
-.entourage-table-container {
-
-    margin-bottom: 28px;
-}
-
-
-.entourage-table thead th {
-
-    font-size: 11px;
-
-    padding:
-        11px 5px;
-}
-
-
-.entourage-table tbody td {
-
-    font-size: 12px;
-
-    padding:
-        10px 5px;
-}
-
-
-/* =====================================
-   MOBILE COMMENTS
-===================================== */
-
-.comments-section {
-
-    margin-top: 35px;
-
-    padding:
-        30px 17px 25px;
-
-    border-radius: 22px;
-}
-
-
-.comments-title {
-
-    font-size: 23px;
-}
-
-
-.comments-subtitle {
-
-    font-size: 12px;
-}
-
-
-.comment-form input,
-.comment-form textarea {
-
-    padding:
-        14px 15px;
-}
-
-
-.comment-form textarea {
-
-    min-height: 115px;
-}
-
-
-.comment-form button {
-
-    padding:
-        13px 18px;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-}
-
-
-.comment-box {
-
-    padding: 17px;
-}
-
-
-.comment-box h4 {
-
-    font-size: 16px;
-}
-
-
-.comment-box p {
-
-    font-size: 13px;
-}
-
-
-}
 
 /* =========================================
-EXTRA SMALL PHONES
+   EXTRA SMALL PHONES
 ========================================= */
 
 @media (max-width: 360px) {
 
+    .content {
 
-.content {
+        padding:
+            35px 10px;
 
-    padding:
-        35px 10px;
-}
+    }
 
+    .party-table thead th {
 
-.party-table thead th {
+        font-size: 10px;
 
-    font-size: 10px;
+        padding:
+            10px 4px;
 
-    padding:
-        10px 4px;
-}
+    }
 
+    .party-table tbody td {
 
-.party-table tbody td {
+        font-size: 11px;
 
-    font-size: 11px;
+        padding:
+            9px 4px;
 
-    padding:
-        9px 4px;
-}
+    }
 
+    .party-section h2 {
 
-.party-section h2 {
+        font-size: 18px;
 
-    font-size: 18px;
+        letter-spacing: 1.5px;
 
-    letter-spacing: 1.5px;
-}
+    }
 
+    .entourage-table thead th {
 
-.entourage-table thead th {
+        font-size: 9px;
 
-    font-size: 9px;
-}
+    }
 
+    .entourage-table tbody td {
 
-.entourage-table tbody td {
+        font-size: 10px;
 
-    font-size: 10px;
-}
-
-
+    }
 
 }
-/* =========================================
-SHARED WEDDING COMMENTS
-========================================= */
 
-.comments-section {
-
-
-width: 100%;
-max-width: 850px;
-
-margin: 50px auto 30px;
-
-padding: 30px 20px;
-
-text-align: center;
-
-
-}
 
 /* =========================================
-COMMENTS TITLE
+   REDUCED MOTION
 ========================================= */
 
-.comments-title {
+@media (prefers-reduced-motion: reduce) {
 
+    .scroll-reveal,
+    .scroll-left,
+    .scroll-right,
+    .scroll-zoom {
 
-margin-bottom: 10px;
+        opacity: 1;
 
-color: #80618f;
+        transform: none;
 
-font-size: 28px;
+        transition: none;
 
-letter-spacing: 2px;
-
-
-}
-
-.comments-subtitle {
-
-
-margin-bottom: 25px;
-
-color: #80618f;
-
-font-size: 15px;
-
-line-height: 1.6;
-
-}
-
-/* =========================================
-COMMENT FORM
-========================================= */
-
-.comment-form {
-
-
-width: 100%;
-
-max-width: 650px;
-
-margin: 0 auto 20px;
-
-display: flex;
-
-flex-direction: column;
-
-gap: 12px;
-
-
-}
-
-/* =========================================
-NAME INPUT
-========================================= */
-
-.comment-form input {
-
-
-width: 100%;
-
-padding: 14px 16px;
-
-border: 1px solid #c7afd1;
-
-border-radius: 10px;
-
-background: rgba(
-    255,
-    255,
-    255,
-    0.75
-);
-
-color: #5f4769;
-
-font-size: 15px;
-
-outline: none;
-
-
-}
-
-/* =========================================
-MESSAGE TEXTAREA
-========================================= */
-
-.comment-form textarea {
-
-width: 100%;
-
-min-height: 120px;
-
-resize: vertical;
-
-padding: 14px 16px;
-
-border: 1px solid #c7afd1;
-
-border-radius: 10px;
-
-background: rgba(
-    255,
-    255,
-    255,
-    0.75
-);
-
-color: #5f4769;
-
-font-size: 15px;
-
-line-height: 1.5;
-
-outline: none;
-
-}
-
-/* =========================================
-INPUT FOCUS
-========================================= */
-
-.comment-form input:focus,
-.comment-form textarea:focus {
-
-border-color: #9b7aaa;
-
-box-shadow:
-    0 0 0 3px
-    rgba(
-        155,
-        122,
-        170,
-        0.15
-    );
-
-
-}
-
-/* =========================================
-POST BUTTON
-========================================= */
-
-.comment-form button {
-
-width: 100%;
-
-padding: 14px 20px;
-
-border: none;
-
-border-radius: 10px;
-
-background:
-    linear-gradient(
-        135deg,
-        #9b7aaa,
-        #80618f
-    );
-
-color: white;
-
-font-size: 14px;
-
-font-weight: bold;
-
-letter-spacing: 1px;
-
-cursor: pointer;
-
-transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
-
-
-}
-
-/* =========================================
-BUTTON HOVER
-========================================= */
-
-.comment-form button:hover {
-
-transform:
-    translateY(-2px);
-
-
-}
-
-/* =========================================
-BUTTON DISABLED
-========================================= */
-
-.comment-form button:disabled {
-
-opacity: 0.6;
-
-cursor: not-allowed;
-
-transform: none;
-
-}
-
-/* =========================================
-COMMENT STATUS
-========================================= */
-
-.comment-status {
-
-min-height: 24px;
-
-margin: 10px auto 20px;
-
-color: #80618f;
-
-font-size: 14px;
-
-}
-
-.comment-status.success {
-
-color: #66835f;
-
-}
-
-.comment-status.error {
-
-
-color: #a45f68;
-
-
-}
-
-/* =========================================
-COMMENTS LIST SECTION
-========================================= */
-
-.comments-list-section {
-
-
-width: 100%;
-
-max-width: 750px;
-
-margin: 30px auto 0;
-
-
-}
-
-.comments-list-section h3 {
-
-margin-bottom: 20px;
-
-color: #80618f;
-
-font-size: 21px;
-
-letter-spacing: 1px;
-
-}
-
-/* =========================================
-COMMENTS LIST
-========================================= */
-
-#commentsList {
-
-
-width: 100%;
-
-display: flex;
-
-flex-direction: column;
-
-gap: 15px;
-
-}
-
-/* =========================================
-COMMENT BOX
-========================================= */
-
-.comment-box {
-
-width: 100%;
-
-padding: 18px 20px;
-
-text-align: left;
-
-background:
-    rgba(
-        255,
-        255,
-        255,
-        0.75
-    );
-
-border:
-    1px solid
-    rgba(
-        128,
-        97,
-        143,
-        0.25
-    );
-
-border-radius: 12px;
-
-box-shadow:
-    0 5px 15px
-    rgba(
-        80,
-        50,
-        90,
-        0.08
-    );
-
-word-wrap: break-word;
-
-overflow-wrap: anywhere;
-
-
-}
-
-/* =========================================
-COMMENT NAME
-========================================= */
-
-.comment-box h4 {
-
-
-margin-bottom: 8px;
-
-color: #80618f;
-
-font-size: 16px;
-
-
-}
-
-/* =========================================
-COMMENT MESSAGE
-========================================= */
-
-.comment-box p {
-
-
-margin: 0 0 10px;
-
-color: #59455f;
-
-font-size: 15px;
-
-line-height: 1.6;
-
-white-space: pre-wrap;
-
-
-}
-
-/* =========================================
-COMMENT DATE
-========================================= */
-
-.comment-box small {
-
-
-display: block;
-
-color: #9b8aa0;
-
-font-size: 11px;
-
-}
-
-/* =========================================
-LOADING MESSAGE
-========================================= */
-
-.loading-comments {
-
-
-padding: 20px;
-
-color: #80618f;
-
-font-size: 14px;
-
-text-align: center;
-
-
-}
-
-/* =========================================
-MOBILE COMMENTS
-========================================= */
-
-@media (max-width: 600px) {
-
-.comments-section {
-
-    padding:
-        25px 12px;
-
-    margin-top: 35px;
-
-}
-
-
-.comments-title {
-
-    font-size: 23px;
-
-    letter-spacing: 1px;
-
-}
-
-
-.comments-subtitle {
-
-    font-size: 13px;
-
-}
-
-
-.comment-form input,
-.comment-form textarea {
-
-    font-size: 14px;
-
-}
-
-
-.comment-form textarea {
-
-    min-height: 110px;
-
-}
-
-
-.comment-box {
-
-    padding: 15px;
-
-}
-
-
-.comment-box h4 {
-
-    font-size: 15px;
-
-}
-
-
-.comment-box p {
-
-    font-size: 14px;
-
-}
-
+    }
 
 }
